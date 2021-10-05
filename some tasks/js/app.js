@@ -1,16 +1,16 @@
-function checkString(string) {
-    let changedArray = [];
-    let newString = string.split(' ');
-    for (let i = 0; i < newString.length; i++) {
-        if (newString[i].length >= 5) {
-            let splittedWord = newString[i].split('').reverse().join('');
-            changedArray.push(splittedWord);
-        } else {
-            changedArray.push(newString[i]);
-        }
-    }
-    return changedArray.join(' ');
-}
+// function checkString(string) {
+//     let changedArray = [];
+//     let newString = string.split(' ');
+//     for (let i = 0; i < newString.length; i++) {
+//         if (newString[i].length >= 5) {
+//             let splittedWord = newString[i].split('').reverse().join('');
+//             changedArray.push(splittedWord);
+//         } else {
+//             changedArray.push(newString[i]);
+//         }
+//     }
+//     return changedArray.join(' ');
+// }
 // noinspection JSAnnotator
 
 // function  ifPalindrome(string) {
@@ -21,20 +21,20 @@ function checkString(string) {
 //2. create an array with string.length-1 from 0 to length-1
 //3.
 
-// function lastSurvivor(str) {
-//     let arr = [];
-//     for (let i = str.length; i > 0; i--) {
-//         arr.length = str.length-1;
-//         for (let j = 0; j < arr.length; j++) {
-//             arr[j] = j;
-//         }
-//         console.log('str: ' + str + ', arr: ' + arr);
-//         if (arr.length == 0) {
-//             return str;
-//         }
-//         str = str.substring(1);
-//     }
-// }
+function lastSurvivor(str) {
+    let arr = [];
+    for (let i = str.length; i > 0; i--) {
+        arr.length = str.length-1;
+        for (let j = 0; j < arr.length; j++) {
+            arr[j] = j;
+        }
+        console.log('str: ' + str + ', arr: ' + arr);
+        if (arr.length == 0) {
+            return str;
+        }
+        str = str.substring(1);
+    }
+}
 
 
 // function lastSurvivor(str, arr) {
