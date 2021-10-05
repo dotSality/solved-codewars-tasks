@@ -1,14 +1,10 @@
-function lastSurvivor(str) {
-    let arr = [];
-    for (let i = str.length; i > 0; i--) {
-        arr.length = str.length-1;
-        for (let j = 0; j < arr.length; j++) {
-            arr[j] = j;
+function lastSurvivor(str, arr) {
+    if (str != '' || str.length === (arr.length - 1)) {
+        str = str.split('');
+        for (i = 0; i < arr.length; i++) {
+            console.log('str: ' + str + ', arr: ' + arr);
+            str.splice(arr[i], 1);
         }
-        console.log('str: ' + str + ', arr: ' + arr);
-        if (arr.length == 0) {
-            return str;
-        }
-        str = str.substring(1);
+        return str.join('');
     }
 }
