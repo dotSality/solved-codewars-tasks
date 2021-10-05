@@ -1,16 +1,16 @@
-// function checkString(string) {
-//     let changedArray = [];
-//     let newString = string.split(' ');
-//     for (let i = 0; i < newString.length; i++) {
-//         if (newString[i].length >= 5) {
-//             let splittedWord = newString[i].split('').reverse().join('');
-//             changedArray.push(splittedWord);
-//         } else {
-//             changedArray.push(newString[i]);
-//         }
-//     }
-//     return changedArray.join(' ');
-// }
+function checkString(string) {
+    let changedArray = [];
+    let newString = string.split(' ');
+    for (let i = 0; i < newString.length; i++) {
+        if (newString[i].length >= 5) {
+            let splittedWord = newString[i].split('').reverse().join('');
+            changedArray.push(splittedWord);
+        } else {
+            changedArray.push(newString[i]);
+        }
+    }
+    return changedArray.join(' ');
+}
 // noinspection JSAnnotator
 
 // function  ifPalindrome(string) {
@@ -87,19 +87,19 @@
 //     return Number(number.join(''));
 // }
 
-function lastDigit(n, d) {
-    let result = [];
-    n = n.toString().split('');
-    if (d <= 0) {
-        return result;
-    } else if (d > n.length) {
-        n = n.map(Number);
-        result = n;
-    } else {
-        for (let i = d; i > 0; i--) {
-            result.unshift(Number(n.pop()));
-        }
-        n.push(...result);
-    }
-    return result;
-}
+// function lastDigit(n, d) {
+//     let result = [];
+//     n = n.toString().split('');
+//     if (d <= 0) {
+//         return result;
+//     } else if (d > n.length) {
+//         n = n.map(Number);
+//         result = n;
+//     } else {
+//         for (let i = d; i > 0; i--) {
+//             result.unshift(Number(n.pop()));
+//         }
+//         n.push(...result);
+//     }
+//     return result;
+// }
