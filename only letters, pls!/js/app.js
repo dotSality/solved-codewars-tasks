@@ -1,0 +1,1 @@
+const removeChars = (s) => {return  s.replace(/[^a-zA-Z\s\n]/g, '')}
